@@ -57,10 +57,11 @@ class pent {
     }
   }
   empty() {
-  	for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 5; i++) {
     	this.cells[i].empty();
     }
-	}
+    this.pnt = 0;
+  }
 }
 
 function getOffset(elmts) {
