@@ -19,11 +19,11 @@ function setup() {
   
   input = createInput();
   input.size(150);
-  input.position(565, 60 - 22.5);
+  input.position(585, 60 - 22.5);
   
   otherInput = createInput();
   otherInput.size(150);
-	otherInput.position(565, 60);
+	otherInput.position(585, 60);
   
   slider = createSlider(0.5, 100, 1, 0.5);
   slider.position(input.x, input.y - slider.height - 5);
@@ -41,6 +41,13 @@ function draw() {
   background(250);
 	frameRate(slider.value());
   
+  push();
+  textSize(13);
+  text("Src:", 561, 60 + 13/3 + 22.5/2 - 22.5);
+  text("In:", 570, 60 + 13/3 + 22.5/2)
+  pop();
+       
+       
   interpreter.step();
 }
 

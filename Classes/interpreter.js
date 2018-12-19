@@ -165,8 +165,8 @@ class interpreter {
   }
 
   r() {
-    this.acc.value = this.in.charAt(this.inPnt).charCodeAt(0);
     if (this.inPnt < this.in.length) {
+      this.acc.value = this.in.charAt(this.inPnt).charCodeAt(0);
       this.inPnt++;
     } else {
       console.log("'r' command with no inputs left");
